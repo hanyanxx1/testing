@@ -8,7 +8,7 @@ brancher:
     - "master"
 install:
   - "npm install"
-  - "npm install -g codecov"
+  - "npm install coveralls --save-dev"
 script:
   - "npm run test"
-  - "codecov"
+after_success: "npm run coverage"
